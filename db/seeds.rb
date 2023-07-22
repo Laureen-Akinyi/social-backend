@@ -7,14 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "seeding users"
-    User.create({
-        user_name: "Laureen Akinyi",
+    users = User.create([
+    { 
+        username: "Laureen Akinyi",
         email: "laureen.akinyi@gmail.com",
         password: "123",
-    })
-    User.create({
-        user_name: "Reginal Spector",
-        email: "regi.spector@gmail.com",
-        password: "123",
-    })
+    },
+    { 
+        username: "Reginal Spector",
+        email: "reginald.spector@gmail.com",
+        password: "123" 
+    }])
 puts "done seeding users"
