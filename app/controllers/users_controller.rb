@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     end
     
     def create_user
-        user = User.create!(user_params)
+        user = User.create(user_params)
         user_session(user.id)
         if user.valid?
            app_response(status_code: 201, message: "Account created succesfully", body: user, serializer: UserSerializer)
