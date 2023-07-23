@@ -84,6 +84,9 @@ test:
 #
 production:
   <<: *default
-  database: social_platform_production
-  username: social_platform
-  password: <%= ENV["SOCIAL_PLATFORM_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+# production:
+#   <<: *default
+#   database: social_platform_production
+#   username: social_platform
+#   password: <%= ENV["SOCIAL_PLATFORM_DATABASE_PASSWORD"] %>
